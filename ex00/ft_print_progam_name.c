@@ -19,7 +19,7 @@ int	ft_putstr(char *str)
 	while(str[i])
 	{
 		i++;
-		write(1, &str[i])
+		write(1, &str[i], 1);
 	}
 }
 
