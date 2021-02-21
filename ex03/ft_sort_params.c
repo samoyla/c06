@@ -37,7 +37,7 @@ void	ft_sort_arg(char *tab[], int size)
 {
 	int i;
 	int j;
-	int swap;
+	int *swap;
 
 	i = 1;
 	while (i < size)
