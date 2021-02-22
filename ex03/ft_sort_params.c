@@ -6,7 +6,7 @@
 /*   By: msamoile <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/19 08:51:59 by msamoile          #+#    #+#             */
-/*   Updated: 2021/02/22 10:37:50 by msamoile         ###   ########.fr       */
+/*   Updated: 2021/02/22 11:00:01 by msamoile         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	ft_sort_arg(char **tab, int size)
 {
 	int		i;
 	int		j;
-	char	*temp;
+	char	*swap;
 
 	i = 1;
 	while (i < size)
