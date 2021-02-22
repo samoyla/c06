@@ -1,39 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_progam_name.c                             :+:      :+:    :+:   */
+/*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msamoile <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/19 08:51:59 by msamoile          #+#    #+#             */
-/*   Updated: 2021/02/22 10:37:50 by msamoile         ###   ########.fr       */
+/*   Created: 2021/02/22 10:30:04 by msamoile          #+#    #+#             */
+/*   Updated: 2021/02/22 10:38:08 by msamoile         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
-
-int	ft_putstr(char *str)
-{
-	int i;
-
-	i = 0;
-	while (str[i])
-	{
-		i++;
-		write(1, str, i);
-	}
-	return (0);
-}
-
-int	ft_strcmp(char *s1, char *s2)
-{
-	int i;
-
-	i = 0;
-	while ((s1[i] && s2[i]) && (s1[i] == s2[i]))
-		i++;
-	return (s1[i] - s2[i]);
-}
 
 int	ft_sort_arg(char **tab, int size)
 {
@@ -56,21 +31,6 @@ int	ft_sort_arg(char **tab, int size)
 			j++;
 		}
 		i++;
-	}
-	return (0);
-}
-
-int	main(int argc, char **argv)
-{
-	int a;
-
-	ft_sort_arg(argv, argc);
-	a = 1;
-	while (a < argc)
-	{
-		ft_putstr(argv[a]);
-		a++;
-		write(1, "\n", 1);
 	}
 	return (0);
 }
