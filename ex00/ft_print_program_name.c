@@ -1,36 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   ft_print_progam_name.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msamoile <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/22 10:30:04 by msamoile          #+#    #+#             */
-/*   Updated: 2021/02/22 10:38:08 by msamoile         ###   ########.fr       */
+/*   Created: 2021/02/19 08:51:59 by msamoile          #+#    #+#             */
+/*   Updated: 2021/02/22 15:32:08 by msamoile         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_sort_arg(char **tab, int size)
-{
-	int		i;
-	int		j;
-	char	*temp;
+#include <unistd.h>
 
-	i = 1;
-	while (i < size)
-	{
-		j = i + 1;
-		while (j < size)
-		{
-			if (ft_strcmp(tab[j], tab[i]) < 0)
-			{
-				swap = tab[i];
-				tab[i] = tab[j];
-				tab[j] = swap;
-			}
-			j++;
-		}
+int	ft_putstr(char *str)
+{
+	int i;
+
+	i = 0;
+	while (str[i])
 		i++;
-	}
+	write(1, str, i);
+	return (0);
+}
+
+int	main(int argc, char **argv)
+{
+	(void)argc;
+	(void)argv;
+	ft_putstr(argv[0]);
+	write(1, "\n", 1);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: msamoile <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/19 08:51:59 by msamoile          #+#    #+#             */
-/*   Updated: 2021/02/22 11:00:01 by msamoile         ###   ########.fr       */
+/*   Updated: 2021/02/22 15:34:09 by msamoile         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,8 @@ int	ft_putstr(char *str)
 
 	i = 0;
 	while (str[i])
-	{
 		i++;
-		write(1, str, i);
-	}
+	write(1, str, i);
 	return (0);
 }
 
